@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navbar with Multilevel Dropdown</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-toggle {
+            background: none;
+            border: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Navbar Menu */
+        .navbar-menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .navbar-menu li {
+            position: relative;
+        }
+
+        .navbar-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            background-color: #34495e;
+        }
+
+        /* Dropdown */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            z-index: 999;
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
+        .dropdown-menu a {
+            padding: 10px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar-menu {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .navbar-menu li {
+                width: 100%;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .dropdown-menu {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">🌾 Smart Farming</div>
+        <button class="navbar-toggle" id="menu-toggle">&#9776;</button>
+        <ul class="navbar-menu" id="navbar-menu">
+
+            <li><a href="#">Dashboard</a></li>
+
+            <li class="dropdown">
+                <a href="#">Profile ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">View/Edit Profile</a></li>
+                    <li><a href="#">Delete Account</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Crops & Listings ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">List New Crop</a></li>
+                    <li><a href="#">My Crop Listings</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Orders ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Incoming Orders</a></li>
+                    <li><a href="#">Completed Orders</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Trader Matches</a></li>
+
+            <li class="dropdown">
+                <a href="#">Transactions ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Transaction History</a></li>
+                    <li><a href="#">Earnings Report</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Notifications ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Weather Alerts</a></li>
+                    <li><a href="#">Government Scheme Alerts</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Harvest Reminders</a></li>
+            <li><a href="#">Expert Guides</a></li>
+            <li><a href="#">Community Forum</a></li>
+            <li><a href="#">Login / Logout</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>

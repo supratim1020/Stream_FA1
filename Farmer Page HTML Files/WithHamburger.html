@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            font-size: 26px;
+            user-select: none;
+            margin-right: 15px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover {
+            background: #34495e;
+        }
+
+        .has-submenu>a::after {
+            content: "▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        .submenu {
+            display: none;
+            background: #34495e;
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .submenu li a {
+            padding-left: 30px;
+        }
+
+        .menu li.active .submenu {
+            display: block;
+        }
+
+        .menu li.active>a::after {
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <span class="hamburger" id="hamburger">&#9776;</span>
+        <span>Farmer Panel</span>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Navigation</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Dashboard</a></li>
+            <li class="has-submenu">
+                <a href="#">Crops & Listings</a>
+                <ul class="submenu">
+                    <li><a href="#">List New Crop</a></li>
+                    <li><a href="#">My Listings</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Orders</a>
+                <ul class="submenu">
+                    <li><a href="#">Incoming Orders</a></li>
+                    <li><a href="#">Completed Orders</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Notifications</a>
+                <ul class="submenu">
+                    <li><a href="#">Weather Alerts</a></li>
+                    <li><a href="#">Scheme Alerts</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Transaction History</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        const toggleSidebar = () => {
+            sidebar.classList.toggle("active");
+            overlay.classList.toggle("active");
+        };
+
+        hamburger.addEventListener("click", toggleSidebar);
+        overlay.addEventListener("click", toggleSidebar);
+
+        // Dropdown functionality
+        document.querySelectorAll(".has-submenu > a").forEach(menuItem => {
+            menuItem.addEventListener("click", function (e) {
+                e.preventDefault();
+                const parent = this.parentElement;
+
+                document.querySelectorAll(".has-submenu").forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove("active");
+                    }
+                });
+
+                parent.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
