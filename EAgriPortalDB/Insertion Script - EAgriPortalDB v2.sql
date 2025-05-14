@@ -133,31 +133,20 @@ USE EAgriPortalDB
 GO
 
 INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U116', 'Rahul Trading Co.', 'LIC123456');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U117', 'Suman Enterprises', 'LIC789012');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U118', 'Agrawal Agro Traders', 'LIC345678');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U119', 'Meena Exports Pvt Ltd', 'LIC901234');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U120', 'Singh Agri Mart', 'LIC567890');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U121', 'Sharma Trade Hub', 'LIC234567');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U122', 'Ravi Imports', 'LIC890123');
-
-INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber)
-VALUES ('U123', 'Lakshmi Traders', 'LIC456789');
+VALUES 
+('U116', 'Rahul Trading Co.', 'LIC123456'),
+('U117', 'Suman Enterprises', 'LIC789012'),
+('U118', 'Agrawal Agro Traders', 'LIC345678'),
+('U119', 'Meena Exports Pvt Ltd', 'LIC901234'),
+('U120', 'Singh Agri Mart', 'LIC567890'),
+('U121', 'Sharma Trade Hub', 'LIC234567'),
+('U122', 'Ravi Imports', 'LIC890123'),
+('U123', 'Lakshmi Traders', 'LIC456789');
 GO
 
--- Insert 35 records into CropAvailabilityDetails for all farmers (U101 to U115) from Users table
+
+
+-- Insert 15 records into CropAvailabilityDetails for all farmers (U101 to U115) from Users table
 USE EAgriPortalDB
 GO
 
@@ -200,31 +189,68 @@ VALUES
 ('CR135', 'U105', 'Ragi', 600.00, 'kg', 35.00, '2025-05-03', 'Farm Lane, Uttar Pradesh', 'Organic finger millet', 'Available', DATEADD(DAY, -12, GETDATE()), NULL);
 GO
 
-
 -- Transaction Table
 USE EAgriPortalDB
 GO
 
 INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
-VALUES 
-('TN101', 'U101', 'U116', 'CR101', 500.00, 26.00, DATEADD(DAY, -4, GETDATE()), 'Completed', DATEADD(DAY, -2, GETDATE())),
-('TN102', 'U102', 'U117', 'CR102', 200.00, 38.00, DATEADD(DAY, -10, GETDATE()), 'Pending', NULL),
-('TN103', 'U103', 'U118', 'CR103', 600.00, 22.00, DATEADD(DAY, -15, GETDATE()), 'Completed', DATEADD(DAY, -13, GETDATE())),
-('TN104', 'U104', 'U119', 'CR104', 150.00, 32.00, DATEADD(DAY, -2, GETDATE()), 'Approved', NULL),
-('TN105', 'U105', 'U120', 'CR105', 2000.00, 34.00, DATEADD(DAY, -20, GETDATE()), 'Rejected', NULL),
-('TN106', 'U106', 'U121', 'CR106', 400.00, 27.50, DATEADD(DAY, -12, GETDATE()), 'Pending', NULL),
-('TN107', 'U107', 'U122', 'CR107', 300.00, 39.00, DATEADD(DAY, -5, GETDATE()), 'Completed', DATEADD(DAY, -3, GETDATE())),
-('TN108', 'U108', 'U123', 'CR108', 750.00, 19.50, DATEADD(DAY, -16, GETDATE()), 'Completed', DATEADD(DAY, -14, GETDATE())),
-('TN109', 'U109', 'U116', 'CR109', 100.00, 52.00, DATEADD(DAY, -8, GETDATE()), 'Approved', NULL),
-('TN110', 'U110', 'U117', 'CR110', 500.00, 44.00, DATEADD(DAY, -18, GETDATE()), 'Cancelled', NULL),
-('TN111', 'U111', 'U118', 'CR111', 350.00, 58.00, DATEADD(DAY, -7, GETDATE()), 'Pending', NULL),
-('TN112', 'U112', 'U119', 'CR112', 450.00, 25.00, DATEADD(DAY, -13, GETDATE()), 'Rejected', NULL),
-('TN113', 'U113', 'U120', 'CR113', 200.00, 82.00, DATEADD(DAY, -3, GETDATE()), 'Approved', NULL),
-('TN114', 'U114', 'U121', 'CR114', 400.00, 14.50, DATEADD(DAY, -25, GETDATE()), 'Completed', DATEADD(DAY, -23, GETDATE())),
-('TN115', 'U115', 'U122', 'CR115', 300.00, 56.00, DATEADD(DAY, -14, GETDATE()), 'Pending', NULL),
-('TN116', 'U101', 'U123', 'CR116', 400.00, 41.00, DATEADD(DAY, -6, GETDATE()), 'Approved', NULL),
-('TN117', 'U102', 'U116', 'CR117', 250.00, 29.00, DATEADD(DAY, -5, GETDATE()), 'Completed', DATEADD(DAY, -4, GETDATE())),
-('TN118', 'U103', 'U117', 'CR118', 700.00, 17.50, DATEADD(DAY, -15, GETDATE()), 'Completed', DATEADD(DAY, -12, GETDATE())),
-('TN119', 'U104', 'U118', 'CR119', 150.00, 36.00, DATEADD(DAY, -1, GETDATE()), 'Pending', NULL),
-('TN120', 'U105', 'U119', 'CR120', 1000.00, 48.00, DATEADD(DAY, -19, GETDATE()), 'Approved', NULL);
+VALUES ('TN101', 'U101', 'U116', 'CR101', 500.00, 26.00, DATEADD(DAY, -4, GETDATE()), 'Completed', DATEADD(DAY, -2, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN102', 'U102', 'U117', 'CR102', 200.00, 38.00, DATEADD(DAY, -10, GETDATE()), 'Pending', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN103', 'U103', 'U118', 'CR103', 600.00, 22.00, DATEADD(DAY, -15, GETDATE()), 'Completed', DATEADD(DAY, -13, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN104', 'U104', 'U119', 'CR104', 150.00, 32.00, DATEADD(DAY, -2, GETDATE()), 'Approved', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN105', 'U105', 'U120', 'CR105', 2000.00, 34.00, DATEADD(DAY, -20, GETDATE()), 'Rejected', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN106', 'U106', 'U121', 'CR106', 400.00, 27.50, DATEADD(DAY, -12, GETDATE()), 'Pending', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN107', 'U107', 'U122', 'CR107', 300.00, 39.00, DATEADD(DAY, -5, GETDATE()), 'Completed', DATEADD(DAY, -3, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN108', 'U108', 'U123', 'CR108', 750.00, 19.50, DATEADD(DAY, -16, GETDATE()), 'Completed', DATEADD(DAY, -14, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN109', 'U109', 'U116', 'CR109', 100.00, 52.00, DATEADD(DAY, -8, GETDATE()), 'Approved', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN110', 'U110', 'U117', 'CR110', 500.00, 44.00, DATEADD(DAY, -18, GETDATE()), 'Cancelled', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN111', 'U111', 'U118', 'CR111', 350.00, 58.00, DATEADD(DAY, -7, GETDATE()), 'Pending', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN112', 'U112', 'U119', 'CR112', 450.00, 25.00, DATEADD(DAY, -13, GETDATE()), 'Rejected', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN113', 'U113', 'U120', 'CR113', 200.00, 82.00, DATEADD(DAY, -3, GETDATE()), 'Approved', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN114', 'U114', 'U121', 'CR114', 400.00, 14.50, DATEADD(DAY, -25, GETDATE()), 'Completed', DATEADD(DAY, -23, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN115', 'U115', 'U122', 'CR115', 300.00, 56.00, DATEADD(DAY, -14, GETDATE()), 'Pending', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN116', 'U101', 'U123', 'CR116', 400.00, 41.00, DATEADD(DAY, -6, GETDATE()), 'Approved', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN117', 'U102', 'U116', 'CR117', 250.00, 29.00, DATEADD(DAY, -5, GETDATE()), 'Completed', DATEADD(DAY, -4, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN118', 'U103', 'U117', 'CR118', 700.00, 17.50, DATEADD(DAY, -15, GETDATE()), 'Completed', DATEADD(DAY, -12, GETDATE()))
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN119', 'U104', 'U118', 'CR119', 150.00, 36.00, DATEADD(DAY, -1, GETDATE()), 'Pending', NULL)
+
+INSERT INTO Transactions (TransactionID, FarmerID, TraderID, ListingID, QuantityRequested, OfferedPrice, RequestDate, [Status], CompletedDate)
+VALUES ('TN120', 'U105', 'U119', 'CR120', 1000.00, 48.00, DATEADD(DAY, -19, GETDATE()), 'Approved', NULL)
 GO
+
