@@ -157,63 +157,27 @@ INSERT INTO TraderProfiles (TraderProfileID, BusinessName, BusinessLicenseNumber
 VALUES ('U123', 'Lakshmi Traders', 'LIC456789');
 GO
 
-
-
--- Insert 15 records into CropAvailabilityDetails for all farmers (U101 to U115) from Users table
-USE EAgriPortalDB
-GO
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR101', 'U101', 'Wheat', 1000.00, 'kg', 25.00, '2025-04-01', 'Village Kheda, Punjab', 'High-quality organic wheat', 'Available', DATEADD(DAY, -5, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR102', 'U102', 'Rice', 500.00, 'kg', 40.00, '2025-05-15', 'Farm Road, Gujarat', 'Premium basmati rice', 'Available', DATEADD(DAY, -12, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR103', 'U103', 'Wheat', 1200.00, 'kg', 22.50, '2025-03-20', 'Rural Path, Haryana', 'Organic wheat, high yield', 'Sold', DATEADD(DAY, -20, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR104', 'U104', 'Tomato', 300.00, 'kg', 30.00, '2025-05-10', 'Village Anand, Maharashtra', 'Fresh hydroponic tomatoes', 'Available', DATEADD(DAY, -3, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR105', 'U105', 'Sugarcane', 5000.00, 'kg', 35.00, '2025-06-01', 'Farm Lane, Uttar Pradesh', 'High-sugar content sugarcane', 'Available', DATEADD(DAY, -25, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR106', 'U106', 'Millet', 800.00, 'kg', 28.00, '2025-04-15', 'Rural Road, Rajasthan', 'Organic pearl millet', 'Available', DATEADD(DAY, -15, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR107', 'U107', 'Paddy', 600.00, 'kg', 38.00, '2025-05-20', 'Village Sangli, Karnataka', 'Organic paddy, short grain', 'Available', DATEADD(DAY, -7, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR108', 'U108', 'Maize', 1500.00, 'kg', 20.00, '2025-04-10', 'Farm Path, Madhya Pradesh', 'Yellow maize, high quality', 'Sold', DATEADD(DAY, -18, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR109', 'U109', 'Lettuce', 200.00, 'kg', 50.00, '2025-05-05', 'Village Nashik, Maharashtra', 'Hydroponic lettuce, fresh', 'Available', DATEADD(DAY, -10, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR110', 'U110', 'Cotton', 1000.00, 'kg', 45.00, '2025-06-15', 'Rural Area, Gujarat', 'High-grade cotton', 'Available', DATEADD(DAY, -22, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR111', 'U111', 'Pulses', 700.00, 'kg', 60.00, '2025-04-25', 'Village Ludhiana, Punjab', 'Organic lentils', 'Available', DATEADD(DAY, -9, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR112', 'U112', 'Barley', 900.00, 'kg', 24.00, '2025-03-30', 'Farm Village, Haryana', 'Traditional barley crop', 'OutOfStock', DATEADD(DAY, -14, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR113', 'U113', 'Apple', 400.00, 'kg', 80.00, '2025-05-25', 'Rural Path, Himachal', 'Organic apples, premium', 'Available', DATEADD(DAY, -4, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR114', 'U114', 'Coconut', 1000.00, 'units', 15.00, '2025-05-30', 'Village Kochi, Kerala', 'Fresh coconuts', 'Available', DATEADD(DAY, -28, GETDATE()), NULL);
-
-INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
-VALUES ('CR115', 'U115', 'Groundnut', 600.00, 'kg', 55.00, '2025-04-20', 'Farm Area, Andhra Pradesh', 'High-oil content groundnuts', 'Available', DATEADD(DAY, -16, GETDATE()), NULL);
-GO
-
+-- Insert 35 records into CropAvailabilityDetails for all farmers (U101 to U115) from Users table
 USE EAgriPortalDB
 GO
 
 INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
 VALUES 
+('CR101', 'U101', 'Wheat', 1000.00, 'kg', 25.00, '2025-04-01', 'Village Kheda, Punjab', 'High-quality organic wheat', 'Available', DATEADD(DAY, -5, GETDATE()), NULL),
+('CR102', 'U102', 'Rice', 500.00, 'kg', 40.00, '2025-05-15', 'Farm Road, Gujarat', 'Premium basmati rice', 'Available', DATEADD(DAY, -12, GETDATE()), NULL),
+('CR103', 'U103', 'Wheat', 1200.00, 'kg', 22.50, '2025-03-20', 'Rural Path, Haryana', 'Organic wheat, high yield', 'Sold', DATEADD(DAY, -20, GETDATE()), NULL),
+('CR104', 'U104', 'Tomato', 300.00, 'kg', 30.00, '2025-05-10', 'Village Anand, Maharashtra', 'Fresh hydroponic tomatoes', 'Available', DATEADD(DAY, -3, GETDATE()), NULL),
+('CR105', 'U105', 'Sugarcane', 5000.00, 'kg', 35.00, '2025-06-01', 'Farm Lane, Uttar Pradesh', 'High-sugar content sugarcane', 'Available', DATEADD(DAY, -25, GETDATE()), NULL),
+('CR106', 'U106', 'Millet', 800.00, 'kg', 28.00, '2025-04-15', 'Rural Road, Rajasthan', 'Organic pearl millet', 'Available', DATEADD(DAY, -15, GETDATE()), NULL),
+('CR107', 'U107', 'Paddy', 600.00, 'kg', 38.00, '2025-05-20', 'Village Sangli, Karnataka', 'Organic paddy, short grain', 'Available', DATEADD(DAY, -7, GETDATE()), NULL),
+('CR108', 'U108', 'Maize', 1500.00, 'kg', 20.00, '2025-04-10', 'Farm Path, Madhya Pradesh', 'Yellow maize, high quality', 'Sold', DATEADD(DAY, -18, GETDATE()), NULL),
+('CR109', 'U109', 'Lettuce', 200.00, 'kg', 50.00, '2025-05-05', 'Village Nashik, Maharashtra', 'Hydroponic lettuce, fresh', 'Available', DATEADD(DAY, -10, GETDATE()), NULL),
+('CR110', 'U110', 'Cotton', 1000.00, 'kg', 45.00, '2025-06-15', 'Rural Area, Gujarat', 'High-grade cotton', 'Available', DATEADD(DAY, -22, GETDATE()), NULL),
+('CR111', 'U111', 'Pulses', 700.00, 'kg', 60.00, '2025-04-25', 'Village Ludhiana, Punjab', 'Organic lentils', 'Available', DATEADD(DAY, -9, GETDATE()), NULL),
+('CR112', 'U112', 'Barley', 900.00, 'kg', 24.00, '2025-03-30', 'Farm Village, Haryana', 'Traditional barley crop', 'OutOfStock', DATEADD(DAY, -14, GETDATE()), NULL),
+('CR113', 'U113', 'Apple', 400.00, 'kg', 80.00, '2025-05-25', 'Rural Path, Himachal', 'Organic apples, premium', 'Available', DATEADD(DAY, -4, GETDATE()), NULL),
+('CR114', 'U114', 'Coconut', 1000.00, 'units', 15.00, '2025-05-30', 'Village Kochi, Kerala', 'Fresh coconuts', 'Available', DATEADD(DAY, -28, GETDATE()), NULL),
+('CR115', 'U115', 'Groundnut', 600.00, 'kg', 55.00, '2025-04-20', 'Farm Area, Andhra Pradesh', 'High-oil content groundnuts', 'Available', DATEADD(DAY, -16, GETDATE()), NULL),
 ('CR116', 'U101', 'Soybean', 800.00, 'kg', 42.00, '2025-05-01', 'Village Kheda, Punjab', 'Non-GMO soybeans', 'Available', DATEADD(DAY, -8, GETDATE()), NULL),
 ('CR117', 'U102', 'Onion', 500.00, 'kg', 28.00, '2025-05-12', 'Farm Road, Gujarat', 'Red onions, high quality', 'Available', DATEADD(DAY, -6, GETDATE()), NULL),
 ('CR118', 'U103', 'Potato', 1500.00, 'kg', 18.00, '2025-04-28', 'Rural Path, Haryana', 'Freshly harvested potatoes', 'Sold', DATEADD(DAY, -17, GETDATE()), NULL),
