@@ -1,0 +1,24 @@
+-- ******** Done ********
+Users
+FarmerProfiles
+TraderProfiles
+CropAvailabilityDetails
+Transactions
+WeatherData
+WeatherAlerts
+GovernmentSchemes
+SchemeAlerts
+HarvestingReminders
+ExpertGuides
+TraderReviews
+GuideReviews
+DiscussionForums
+TraderFavorites
+TraderCropPreferences
+Policies
+Announcements
+FarmerReviews
+ShipmentTracking
+
+
+-- ******** UnDone ********
