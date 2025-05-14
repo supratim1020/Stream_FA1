@@ -209,3 +209,29 @@ INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Un
 VALUES ('CR115', 'U115', 'Groundnut', 600.00, 'kg', 55.00, '2025-04-20', 'Farm Area, Andhra Pradesh', 'High-oil content groundnuts', 'Available', DATEADD(DAY, -16, GETDATE()), NULL);
 GO
 
+USE EAgriPortalDB
+GO
+
+INSERT INTO CropAvailabilityDetails (ListingID, FarmerID, CropName, Quantity, Unit, PricePerUnit, HarvestDate, [Location], [Description], [Status], CreatedAt, UpdatedAt)
+VALUES 
+('CR116', 'U101', 'Soybean', 800.00, 'kg', 42.00, '2025-05-01', 'Village Kheda, Punjab', 'Non-GMO soybeans', 'Available', DATEADD(DAY, -8, GETDATE()), NULL),
+('CR117', 'U102', 'Onion', 500.00, 'kg', 28.00, '2025-05-12', 'Farm Road, Gujarat', 'Red onions, high quality', 'Available', DATEADD(DAY, -6, GETDATE()), NULL),
+('CR118', 'U103', 'Potato', 1500.00, 'kg', 18.00, '2025-04-28', 'Rural Path, Haryana', 'Freshly harvested potatoes', 'Sold', DATEADD(DAY, -17, GETDATE()), NULL),
+('CR119', 'U104', 'Cucumber', 300.00, 'kg', 35.00, '2025-05-08', 'Village Anand, Maharashtra', 'Organic cucumbers', 'Available', DATEADD(DAY, -2, GETDATE()), NULL),
+('CR120', 'U105', 'Jute', 2000.00, 'kg', 50.00, '2025-06-05', 'Farm Lane, Uttar Pradesh', 'High-fiber jute', 'Available', DATEADD(DAY, -21, GETDATE()), NULL),
+('CR121', 'U106', 'Sorghum', 700.00, 'kg', 30.00, '2025-04-22', 'Rural Road, Rajasthan', 'Organic sorghum grains', 'Available', DATEADD(DAY, -13, GETDATE()), NULL),
+('CR122', 'U107', 'Green Peas', 400.00, 'kg', 45.00, '2025-05-18', 'Village Sangli, Karnataka', 'Fresh green peas', 'Available', DATEADD(DAY, -5, GETDATE()), NULL),
+('CR123', 'U108', 'Sunflower', 600.00, 'kg', 65.00, '2025-04-30', 'Farm Path, Madhya Pradesh', 'High-oil sunflower seeds', 'OutOfStock', DATEADD(DAY, -19, GETDATE()), NULL),
+('CR124', 'U109', 'Spinach', 250.00, 'kg', 40.00, '2025-05-07', 'Village Nashik, Maharashtra', 'Hydroponic spinach', 'Available', DATEADD(DAY, -11, GETDATE()), NULL),
+('CR125', 'U110', 'Sesame', 500.00, 'kg', 70.00, '2025-05-20', 'Rural Area, Gujarat', 'White sesame seeds', 'Available', DATEADD(DAY, -24, GETDATE()), NULL),
+('CR126', 'U111', 'Chickpea', 900.00, 'kg', 55.00, '2025-04-18', 'Village Ludhiana, Punjab', 'Organic chickpeas', 'Available', DATEADD(DAY, -10, GETDATE()), NULL),
+('CR127', 'U112', 'Oats', 600.00, 'kg', 32.00, '2025-04-05', 'Farm Village, Haryana', 'Whole grain oats', 'Sold', DATEADD(DAY, -26, GETDATE()), NULL),
+('CR128', 'U113', 'Mango', 350.00, 'kg', 90.00, '2025-06-01', 'Rural Path, Himachal', 'Alphonso mangoes, premium', 'Available', DATEADD(DAY, -3, GETDATE()), NULL),
+('CR129', 'U114', 'Banana', 1000.00, 'units', 5.00, '2025-05-28', 'Village Kochi, Kerala', 'Organic bananas', 'Available', DATEADD(DAY, -15, GETDATE()), NULL),
+('CR130', 'U115', 'Mustard', 400.00, 'kg', 60.00, '2025-04-25', 'Farm Area, Andhra Pradesh', 'High-quality mustard seeds', 'Available', DATEADD(DAY, -20, GETDATE()), NULL),
+('CR131', 'U101', 'Carrot', 300.00, 'kg', 38.00, '2025-05-10', 'Village Kheda, Punjab', 'Fresh organic carrots', 'Available', DATEADD(DAY, -7, GETDATE()), NULL),
+('CR132', 'U102', 'Cauliflower', 500.00, 'kg', 25.00, '2025-05-15', 'Farm Road, Gujarat', 'Large head cauliflowers', 'Available', DATEADD(DAY, -4, GETDATE()), NULL),
+('CR133', 'U103', 'Barley', 800.00, 'kg', 26.00, '2025-04-12', 'Rural Path, Haryana', 'Organic barley grains', 'OutOfStock', DATEADD(DAY, -22, GETDATE()), NULL),
+('CR134', 'U104', 'Capsicum', 200.00, 'kg', 48.00, '2025-05-09', 'Village Anand, Maharashtra', 'Green capsicum, hydroponic', 'Available', DATEADD(DAY, -9, GETDATE()), NULL),
+('CR135', 'U105', 'Ragi', 600.00, 'kg', 35.00, '2025-05-03', 'Farm Lane, Uttar Pradesh', 'Organic finger millet', 'Available', DATEADD(DAY, -12, GETDATE()), NULL);
+GO
