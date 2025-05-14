@@ -344,7 +344,7 @@ CREATE TABLE ShipmentTracking (
 --   ShipmentID INT IDENTITY(1,1) PRIMARY KEY,
   ShipmentID VARCHAR(10) PRIMARY KEY, -- e.g., SH101, SH102
   TransactionID VARCHAR(10) NOT NULL,
-  [Status] NVARCHAR(20) NOT NULL CHECK (Status IN ('Pending', 'InTransit', 'Delivered', 'Delayed')),
+  [Status] NVARCHAR(20) NOT NULL CHECK (Status IN ('Pending', 'InTransit', 'Delivered', 'Delayed', 'Cancelled')),
   --TrackingDetails NVARCHAR(500),
   ExpectedDeliveryDate DATE,
   UpdatedAt DATETIME DEFAULT GETDATE(),
