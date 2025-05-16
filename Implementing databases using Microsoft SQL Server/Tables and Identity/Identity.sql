@@ -1,0 +1,3 @@
+CREATE TABLE Categories(
+	[CategoryId] TINYINT CONSTRAINT
+)
