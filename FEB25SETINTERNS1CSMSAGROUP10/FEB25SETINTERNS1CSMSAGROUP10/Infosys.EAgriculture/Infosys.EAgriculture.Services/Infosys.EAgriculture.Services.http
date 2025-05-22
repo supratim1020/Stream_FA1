@@ -1,0 +1,6 @@
+@Infosys.EAgriculture.Services_HostAddress = http://localhost:5138
+
+GET {{Infosys.EAgriculture.Services_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
